@@ -67,6 +67,10 @@ hr {
     animation-name: fadeIn;
 }
 
-.site-logo {
-    width: 31px;
+.release-title {
+    font-size: 1rem;
+}
+
+.badge:first-of-type {
+    margin-left: 0;
 }
