@@ -14,7 +14,6 @@ export class HomeComponent {
     this.loading = true;
     this.spotify.getNewReleases().subscribe((data: any) => {
       this.newReleases = data;
-      console.log(data);
       setTimeout(() => {
         this.loading = false;
       }, 1500);

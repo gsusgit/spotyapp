@@ -1,5 +1,5 @@
 <div class="card-columns">
-    <div *ngFor="let item of items" class="card bg-light">
+    <div (click)="verArtista(item)" *ngFor="let item of items" class="card bg-light puntero">
       <img [src]="item.images|noimage" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title release-title">{{item.name|uppercase}}</h5>
