@@ -13,7 +13,7 @@ export class TarjetasComponent {
 
   constructor(private router: Router) { }
 
-  verArtista(item: any) {
+  verArtista(item: any): void {
     let artistId;
     if (item.type === 'artist') {
       artistId = item.id;

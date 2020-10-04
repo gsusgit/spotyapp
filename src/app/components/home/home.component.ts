@@ -9,6 +9,8 @@ export class HomeComponent {
 
   newReleases: any[] = [];
   loading: boolean;
+  errorCarga = false;
+  errorMessage: string;
 
   constructor(private spotify: SpotifyService) {
     this.loading = true;
@@ -17,6 +19,12 @@ export class HomeComponent {
       setTimeout(() => {
         this.loading = false;
       }, 1500);
+    }, error => {
+        setTimeout(() => {
+          this.errorCarga = true;
+          this.errorMessage = error.error.error.message;
+          this.loading = false;
+        }, 1500);
     });
   }
 
